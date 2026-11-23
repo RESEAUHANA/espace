@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive"><title>Espace HANA · espace privé</title>
+<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=Archivo:wght@400;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}html,body{overflow-x:clip}
+body{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:16px;font-family:Archivo,system-ui,sans-serif;color:#fff;background:radial-gradient(circle at 50% 30%,#1b2744,#0b1120)}
+form{width:min(380px,100%);text-align:center;display:flex;flex-direction:column;gap:14px}
+.brand{display:inline-flex;justify-content:center;align-items:center;gap:8px;font-family:Antonio,Impact,sans-serif;font-size:15px;letter-spacing:.16em;text-transform:uppercase;color:#7fd6a3}
+.brand svg{width:15px;height:15px;fill:#7fd6a3}
+h1{font-family:Antonio,Impact,sans-serif;font-weight:500;font-size:34px;letter-spacing:.02em;text-transform:uppercase}
+p{color:#8fa0c4;font-size:13.5px;line-height:1.5}
+input{font:600 18px Archivo,sans-serif;letter-spacing:.14em;text-align:center;text-transform:uppercase;padding:14px;border-radius:14px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);color:#fff;width:100%}
+button{font:600 14px Archivo,sans-serif;padding:13px;border-radius:999px;border:0;background:#2fa36b;color:#fff;cursor:pointer}
+button:disabled{opacity:.6}
+.err{color:#f08a7e;font-size:13px;min-height:18px}
+</style></head><body>
+<form id="f" autocomplete="off">
+<span class="brand"><svg viewBox="0 0 24 24"><rect x="8" y="0" width="6" height="6" rx="1"/><rect x="16" y="8" width="6" height="6" rx="1"/><rect x="0" y="16" width="6" height="6" rx="1"/><rect x="8" y="16" width="6" height="6" rx="1"/><rect x="16" y="16" width="6" height="6" rx="1"/></svg>Espace HANA</span>
+<h1>Espace privé</h1>
+<p>Entrez votre code d'accès personnel.</p>
+<input id="k" type="password" aria-label="Code d'accès" placeholder="Code d'accès" autocapitalize="characters" spellcheck="false">
+<button id="b" type="submit">Entrer</button>
+<div class="err" id="e" role="alert"></div>
+</form>
+<script>
+var D={"s": "xGfC3T9RLW++GosZPt4NiQ==", "i": "m9RN09mcBhumZMt0", "c": "QcPTvpETIASzjnTMVooMYA3KENK2p5u9ZVckfNegcmUSgDwif57xFjA/FNNuf5ESXsD45jfuSZdP426TtrtNEtXlbRHZWgL6WgZnagIeoaPphstaCu/59nvp/8Ik5FP5EPuceYh00g7sBCjmBOe4cRl/RbK+DeQJx5Tx3sFaIRztpY9dzXBJ5O3qCmU7prmVjWntvUUD3F+RdAUI5Tlm0IHSF7zdQPGFFoiRAIN9cop5eqsWRmHjbCzM91pcLRoTkS8m92O783JwYZXu45QU5KwD2lz204AcBrR0u6VqvxPGX+9yMuYdy8JuxHxeOyAq5MNvcLRp4B4kKv1wkqbLs8GrQSJ5v1dV11Tdky5J7aT7Rbb2+ruFBwiN8TneqxWzlTVYk+PE7SypTup7ImdH4mCNVoF/L7EFsrkpHDH0hekXc8+5LMmM7FCpKM51viIs+VouLCKJkrxaKKExKrpiWzpLCX2mjiyls2LYVNrs87ONMo425wIfO8+lSp1FIoHxMYrBgndaXGHkK2raDoNzSV3VHJAmxX42xO3IsjvcCHEp//AXFEvbCqKG8J9+4EMBey9ON3q1vGATH5Knelbd8inxdOP5pHHl1pU4o9onAgQGgXIj6oN/EwVV9O8gi7+fICVjbXlVPPYArZNqch14VP5gD+94/NxuieQ09gVVeQZ78aIkwrPygtgH17QIZSJkdbh53kep0YJs7ZGQMnZ8Z6AUK/SGOJT2yDokNCct9lfUxP5OMTXLps9XQRzBCeXhG+yJTvruZgT28jMQpE0ZXJmR9wI3kBbTAPwhheevlc3etAZoWh6QfjR8dY688Cv7z0Hpt6WnWuQC1cyYu9mn1EciSn1JDnwP7vI73XCLJcbVf4GzcCqIk4VTSveS5cZ5BoX1W8Yz2ILeITznWuN1DpMab04YoOrUdqODteMc8+qPe5DPLKrzH6VAutGHkQt0elnRuvA0mP8SMqzc13cNqOpPBVLVZ/ZxfGOwXl9prj+9eqiFx1f+cCxj4G1WO3L5w5LnJoYLRdHefEWHHXwuaNUnv0g3TgtUOUnNTLieIIo91IQaW0itVGb/kXCcGZX7iLVylqpvrn4eBjuxM1DWaj/++ndrhzqK9eCO7o9CKrgg0o5L6qiUeRVBV/X6JAZTzicn8naEbT3EmlqnB5BkuxuM3tlRDb2RPNdCwuOSQ38/1PNazV6IcILrJ0lwuI63fRWD+8j8YyC+P1knxaRs+1mLWoBu3CXx24mbPI3RfIh3YhJE+qbHp8LvsiDLoV49zRlcNttA4f9zvV3/FzVnBiCp33mSH9Dz3Mc3e/hG+RBEdplXczJNkXfb9WnPXo++uDHKM2SFQAwdgasJDRhZ6nrKCSCUJ4oZ60HaZXKn3tTgxplfYwK/Oqax/sWG6awmLnGJEPNEW+FI/l8I0c2SfACSJh5nVk26w2be/ohY5/5pL16jmbXhXJb8OrYLWZf/kS0pyE43FA3777cXne87qCPOJof9Non2dKI647vP/gY+lxfbmh+kZ/HxImrTzFyFxTwvj/I9ZR/anVzJg3K0970zHQOUEqpld8BszoqEAJw8iKnsMOmjuJ+04B7GTNLucsSD3TM1NF3Y5iUvWGLEkUC//ynTjuZsxJovY4fHmbDGmKOQSIIrFIZZe5qeXB+T5GtAq1Sg6zXoJzY60Sgrenk1Q7PgYguT+jlkR66bxcO91rHQ8a74X6hZ1uZg+4Gn6hF9NrSKKbluNHVtHsEcQeyrRh4sfzIzKVjQRl/pzEsbWu51RiV7VQ4+U1AgRZ1UtbxZNldm2Sntj/OK7SaRw2jDmkypk60WhTQ5wav2mh3cQi+CIqffgYW6vz47kX90KBN/n3RSVBZUTHMEzUOyS0K37p8CgropwOEN7yopRFEQQ+C6ByO1ZoGxfd+fcJzFIYMntv0asQJQJ1DD3RahpYcW7tEjctaj+fjQVW8QuGMgasZ4CKnt8Uyri15SuTvYYO7WmBY31wjUx+Amfr0nO7gi/z1snMPgxzVWvls0cfZ8oA8yy/8XjmhmtF06aBsZPH6sKOzjJeje7n4gHp57sbA4JrH4Q3Kn2BlHWsdsE03VdRLp3l06+liGR+0tIETksZqk4s9p0hvA6c85+xiQHrwxJSR9UP9+m7mtmDxoRJH5sSmfIMU2aGUnx1YYXXwIpY3XPojt+xqRc8r9z7Juw7QCkT0maS/Yn4jWbBz1ufN+dPB0Gpo/tJS7d3d2FS/SXdo12iInMNEhSf35EYM0Js7taxjbYqKnfShiGU+u1ckl0w9VKn/SWzfDuMDRfKl54Wrp/jNdaQcrQnkulLQoM1CoBOV7ewHZC0YxEK/65Q7YlwTnco91Wi0HGIjmcLlb2kB/TixHiicu/rwgptiyKNk7bH/sUbaCqN31l1ppU/8xsZDyb84fkg/dPJ4ks6cAMdx2Om9tDPIsYI7oCegbNmdE2YKrrTxslat6hy2tNEJC53DAjTOWrQabI9TJeTDcfWXG7tzxUZGV6R7fMza8qT8BYQXZm9kG13C65eYfg74Jew+ocyJKf1TU+FXlKaOcgpWDKLEugIymOftz4IKmcb2hprZsvr7YlE6c/9FeDXYgG8S2KMUVApI0EPnddEHExwHtqTq02CYILe5QsVIWD95GcE3GdMKKePujQFe9v4riv1Xiw1FBomDRSZvdIfZDbhwmjIKtNq9uX3doNKIhI/oIxLjYIi74pRn+Qi9EoJILRnLLaqgb5B73iQ96Mr+2fcCMwoxy4pQ13otr+tJydjTaTnd5ydVF69RaQ1KNX7wiitF/CeDqS620nv/9THALuZdKtUc9N4wQoxqc53toNng21QzsLsREQpH9jzdsoPthT9hq4qNOpkkkpQ/gn1aNumzELeoMXRg25pp0p3SANmaElqsqMkpN6/sJT6NP3dOBt1fy3LCPVHFUQLhZPJLHy783/SnPBx/Klc0V9i03gpmbQAIC36NFb+Tol9JjGZCdOLVYbdaxTI6li8rIuSeSCKRvWjzQfBklzk50H30qKjM1rE70myXo22bCu3XcfEBqu95aZDHNFkZIuS7LNdr90VxXRe73HL7LG1WrFZbZ347yRyBLwNByUk9SoY41/uj41MYWbXF+bo1UuijmuetU2hFnxFzjcg+GTjZetJr0u3ra4aSRUEHfwikxoHV8C1HcKeFt2YLcLtoOL/QNCi7XDqv0b27Um3fPWEF4YvZOga664ewbxVVacBVGEl/Zkij5AV52dweX9A+6WUv+k+0td0wftYFWwubSHK1hfZTIWFNsVD25n5/G2K2vvhw4W0KUhG/OU5LgyaUFSOmHTSyABR3HD1QNmxj/o8fgbrkfHIO9rpKnKN5g1CTBI5b9lb9g5K38sgjok53IJ7zDHT8qO7rpxbQ68YvycFR2BXceMKWOpHG5Thnaigy/R3YVIUgrR2ayAt2iOy9NAFarEtQGmnu39P0SVI1gLnDeIcsAJdOUyX1DaWVo652GefHBIlQMYPG0aC9q8GibK43BaNqN67yC1wVF0Y+qrs1JnPflX869kuumYy8P3x06bB/JLvScFjKKPSqP2aaiZaSxzXVo9mCrlZPNtuYi0634ckGpUDCXzDa1IqsBDVmHKFNPlxPzF+hbM0zIiepVvcZYdbjPuy7aCW1mZmixXCWQtoG17tQwI0vALD+5Ecq7GQB78Y5d0Th8p0zVXZhvYO6K7mLjwsegQpAUZUwDn8SHnQHciCX8puARXqp8ZR12QmLlS/eka8FZMxEOhrTQjS8DtC+NVXntB/OKr3FaEf/428DfLcmCWMTc6SWNlEuSK6HbPEn16ptXjqflV3zpATV471Vle1frIPu8k35dve7abRG6xlXsMDa8VzWBuuFhJSFbC6MgFpL0AdZlOAGhDDqk25Fj8iMr5/3JeEHGYUdc3iLwbEk5H93WQv5XbVr0E51oOXWe9x85u4F+D5H/XNLmRT/FgWaWZR4CcqzwsE/jBlkIi9d3CdVFrF9FrPmaVVpSGxF+y20TcNv+PNjtu3S2mnuhI50C7d9xGD8=", "n": 600000};
+function u(s){return Uint8Array.from(atob(s),function(c){return c.charCodeAt(0)})}
+async function dec(code){
+  var km=await crypto.subtle.importKey('raw',new TextEncoder().encode(code),'PBKDF2',false,['deriveKey']);
+  var key=await crypto.subtle.deriveKey({name:'PBKDF2',salt:u(D.s),iterations:D.n,hash:'SHA-256'},km,{name:'AES-GCM',length:256},false,['decrypt']);
+  var pt=await crypto.subtle.decrypt({name:'AES-GCM',iv:u(D.i)},key,u(D.c));
+  return new TextDecoder().decode(pt);
+}
+async function go(code,remember){
+  var h=await dec(code);
+  if(remember){try{sessionStorage.setItem('hana-k',code)}catch(e){}}
+  document.open();document.write(h);document.close();
+  setTimeout(function(){document.body&&document.body.classList.add('on')},80);
+}
+(function(){try{var c=sessionStorage.getItem('hana-k');if(c)go(c,false).catch(function(){})}catch(e){}})();
+document.getElementById('f').addEventListener('submit',function(ev){
+  ev.preventDefault();var b=document.getElementById('b'),e=document.getElementById('e');
+  var c=document.getElementById('k').value.replace(/[\s-]+/g,'').toUpperCase();
+  b.disabled=true;e.textContent='';
+  go(c,true).catch(function(){b.disabled=false;e.textContent="Code incorrect. Il vous a été remis avec votre audit."});
+});
+</script></body></html>
